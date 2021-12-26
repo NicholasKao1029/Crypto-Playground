@@ -35,6 +35,41 @@
       "artifacts": [
         "HelloWorld"
       ]
+    },
+    "/Users/nickkao/Personal/projects/tmp/hello-world-smart-contract/contracts/HelloWorld.sol": {
+      "lastModificationDate": 1640548932530,
+      "contentHash": "272264efd15566d814ea4850120c9db7",
+      "sourceName": "contracts/HelloWorld.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.3"
+      ],
+      "artifacts": [
+        "HelloWorld"
+      ]
     }
   }
 }

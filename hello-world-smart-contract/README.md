@@ -62,4 +62,5 @@ e.g.
 ## Deploy Steps
 
 `yarn` or `npm install` proj dependencies
- 
+Make sure `.env` is filled according to above
+Look at `hardhat.config.js` to see where its used
