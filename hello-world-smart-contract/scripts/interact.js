@@ -15,7 +15,6 @@ const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider);
 
 // Contract
 const helloWorldContract = new ethers.Contract(CONTRACT_ADDRESS, contract.abi, signer);
-console.log(Object.getOwnPropertyNames(helloWorldContract))
 
 async function main() {
     const message = await helloWorldContract.message();
