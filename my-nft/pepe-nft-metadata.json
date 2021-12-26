@@ -1,0 +1,13 @@
+{
+    "attributes" : [ {
+     "trait_type" : "Action",
+      "value" : "Coium"
+    }, {
+      "trait_type" : "Gear",
+      "value" : "Respirator"
+    } ],
+    "description" : "Pepe takes a deep breathe of copium through his respirator while closing his eyes",
+    "image" : "https://gateway.pinata.cloud/ipfs/QmahC2xn8yR6dJVMsHzySpC5uFM6XDvEVuAo7VHdJ5e274",
+    "name" : "Pepe Copium"
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "web3-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NK",
+  "license": "ISC",
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.1.9",
+    "web3": "^1.6.1"
+  }
+}
