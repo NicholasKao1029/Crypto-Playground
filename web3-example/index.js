@@ -1,3 +1,4 @@
+// API key has been deleted repalce with your own
 API_key = "Asc_OHlMdiOfv72dLkTgKKxeR1hggUGZ"
 async function main() {
  const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
