@@ -1,4 +1,8 @@
-# WARNING DON"T UPLOAD .env is saved in git history smh
+## Tutorial Link
+[how to create a nft](https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft)
+
+
+## Builds off of `hello-world-smart-contracts` folder
 
 ## Barebones implementation of NFT fun
 
