@@ -1,4 +1,5 @@
-// API key has been deleted repalce with your own
+// API key has been deleted replace with your own 
+// If you want to improve should use dotenv with .env file
 API_key = "Asc_OHlMdiOfv72dLkTgKKxeR1hggUGZ"
 async function main() {
  const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
