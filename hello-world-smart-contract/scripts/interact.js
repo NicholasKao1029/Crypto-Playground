@@ -30,6 +30,7 @@ async function main() {
     console.log(`newMessage is now ${newMessage}`);
 
     console.log(newMessage === updateVal)
+    assert(newMessage === updateVal)
 
 }
 main();
