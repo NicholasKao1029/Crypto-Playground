@@ -7,3 +7,7 @@ Corresponding information can be found in the READMEs of the individual repos
 ### TODOs
 
 - Use [Git Submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules) where appropriate
+
+### Notes
+
+Kinda funny that CSS is 80% of the repo 
