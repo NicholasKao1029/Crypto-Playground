@@ -52,4 +52,21 @@ withdrawn by the owner of the contract.
 
 ### Part 4
 
+*simpleStorage folder*
 
+Compile contract via solcx, uses similar config format to hardhat
+
+deployed contract and interacted with contract on ganacha and then kovan using python web3.
+
+build transaction
+sign transaction 
+send transaction 
+wait for transaction -> get receipt
+
+get a refrence to the contract using address and abi
+
+undersatnd difference between call (doesnt change state only reads) and a transaction (changes state)
+
+### Part 5 
+
+*brownieSimpleStorage folder*
