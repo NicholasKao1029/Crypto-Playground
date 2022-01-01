@@ -70,3 +70,12 @@ undersatnd difference between call (doesnt change state only reads) and a transa
 ### Part 5 
 
 *brownieSimpleStorage folder*
+
+Show a way to use brownie, very much like hardhat for the python developer. 
+
+Does a lot of the heavy work compiling down, setting up a repsitory for you. 
+You can save accoutnts via brownie and interact with default accounts from ganache via `accounts` object imported from brownie
+There is a CLI tool that you can interact with.
+Work with testing contracts
+
+
