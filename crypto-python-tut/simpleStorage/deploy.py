@@ -9,6 +9,9 @@ ganache_address = os.getenv("LOCAL_BLOCKCHAIN_ADDRESS");
 kovan_address = os.getenv("KOVAN_BLOCKCHAIN_ADDRESS");
 chain_id = int(os.getenv("CHAIN_ID"));
 
+def something():
+    print("Hello World");
+
 
 with open("./SimpleStorage.sol", "r") as file:
     simple_storage_file = file.read()
