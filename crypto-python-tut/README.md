@@ -113,3 +113,24 @@ that doesn't get torndown.
 Lastly we also saw the `publish_source` param for deploy, which is a boolean param that we determine via 
 values in our yml config to see if we want to verify the contract (only makes sense on mainnet deployments)
 
+
+### Part 7 
+
+*smartcontract-lottery
+
+Starting from scratch with a new contract concept, while working with chainlinks vrf randomness contract,
+that helps explain how to deal with randomness on the blockchain as blockchains are determinsitic. 
+
+It talks about setting up callback functions, as well as testing these types of interactions via listening to events that you can emit.
+
+Also enum data types during the contracts to make public the state of the contract
+
+Also using a lot of the test Contracts such as LinkToken contract, aggregator and vrfcoordinator. Things such as this are used
+when appropriate (specifically when running on LOCAL BLOCKCHAIN ENVIRONMENTS. Abstracting the retrieval of a given contract 
+with a mixture of saving information in the config (such as the address) and retrieving it based on our defined names
+    - e.g. eth_usd_price_feed
+Then deploying if we haven't seen them yet AND we're in the local env, and/or retireving the latest contract by the type from our mapping of name to type.
+Or we use the address saved in the config based on the network we've run the process in then building the contract object
+via name, address and abi.
+
+Also we created a fund with link method
