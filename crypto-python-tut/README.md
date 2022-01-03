@@ -134,3 +134,14 @@ Or we use the address saved in the config based on the network we've run the pro
 via name, address and abi.
 
 Also we created a fund with link method
+
+
+### Part 8 
+
+*erc20-brownie*
+
+This was a much faster deployment due to the foundation of the previous lessons. 
+
+We used openzepplins ERC20 implementation, to create tokens and deploy them Using helpful_scripts from previous projects.
+
+### Part 9
