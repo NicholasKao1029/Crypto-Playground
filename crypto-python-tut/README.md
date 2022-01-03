@@ -79,3 +79,37 @@ There is a CLI tool that you can interact with.
 Work with testing contracts
 
 
+### Part 6 
+
+*brownie-fund-me*
+
+Created a deployment of the fund me contract similr to simple storage but with a more complicated contract.
+The main learnings came from the different chains that were spun up.
+
+Understanding the local environment, setting up a ganache-local chain on Ethereum, what this allows is for persisted instances of contracts locally, 
+because development chains that get spun up after the script has run that environment is teared down and is lost. 
+
+In our `brownie-config.yml` we define different networks and different values that help with our 
+building of the network.
+
+Another big thing that sprung out of from the code is that whlie we working with multiple networks
+there are different requirements, with regards to how we get accounts and how we interact with external contracts.
+To deal with this we created much more modular code,
+    - Accounts
+        - Handled via querying the current network to see if we're on a local or forked local to pick 
+        a generated account. 
+        - or if we're not then we're dealing with deployment keys inside of our config/.env
+    - Contracts
+        - We are using the chainlink contract ETH/USD that helps us to get converstion data from
+        Chain Link which integrates external api data into a decentralized way to the blockchain.
+        - So basically we will deploy a mock if we see that we're in our local blockchain environment
+        because our dependency on the contract won't exist when that chain is spun up so we have to mock it.
+From this we changed the contract to take the address as a parameter which we can pass into {contract}.deploy()
+as parameters before the other configuration params, allowing us to have a more flexible and less hard coded code.
+
+We also interacted with the contract via another script, leveraged by the fact we can deploy to a local instance
+that doesn't get torndown. 
+
+Lastly we also saw the `publish_source` param for deploy, which is a boolean param that we determine via 
+values in our yml config to see if we want to verify the contract (only makes sense on mainnet deployments)
+
