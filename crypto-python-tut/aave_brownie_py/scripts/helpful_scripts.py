@@ -1,4 +1,4 @@
-frnom brownie import (
+from brownie import (
     network,
     config,
     accounts,
@@ -29,39 +29,40 @@ def get_account(index=None, id=None):
     return accounts.add(config["wallets"]["from_keys"])
 
 
-# contract_to_mock = {
-#     "eth_usd_price_feed": MockV3Aggregator,
-#     "vrf_coordinator": VRFCoordinatorMock,
-#     "link_token": LinkToken,
-# }
+contract_to_mock = {
+    "weth_token": interface.IWeth  # ?
+    # "eth_usd_price_feed": MockV3Aggregator,
+    # "vrf_coordinator": VRFCoordinatorMock,
+    # "link_token": LinkToken,
+}
 
 
-# def get_contract(contract_name):
-#     """
-#     This function will grab the contract addresses
-#     from the brownie config if defined, otherwise, it will
-#     deploy  a mock version of that contract and return that mock contract.
+def get_contract(contract_name):
+    """
+    This function will grab the contract addresses
+    from the brownie config if defined, otherwise, it will
+    deploy  a mock version of that contract and return that mock contract.
 
-#         Args:
-#             contract_name (string)
+        Args:
+            contract_name (string)
 
-#         Returns:
-#             brownie.network.contract.ProjectContract: The most recently deployed
-#             version of this contract
-#     """
-#     contract_type = contract_to_mock[contract_name]
-#     if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
-#         if len(contract_type) <= 0:
-#             # contract hasn't been created deploy now
-#             deploy_mocks()
-#         contract = contract_type[-1]
-#     else:
-#         # from config retrieve address of contract
-#         contract_address = config["networks"][network.show_active()][contract_name]
-#         contract = Contract.from_abi(
-#             contract_type._name, contract_address, contract_type.abi
-#         )
-#     return contract
+        Returns:
+            brownie.network.contract.ProjectContract: The most recently deployed
+            version of this contract
+    """
+    contract_type = contract_to_mock[contract_name]
+    if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
+        if len(contract_type) <= 0:
+            # contract hasn't been created deploy now
+            deploy_mocks()
+        contract = contract_type[-1]
+    else:
+        # from config retrieve address of contract
+        contract_address = config["networks"][network.show_active()][contract_name]
+        contract = Contract.from_abi(
+            contract_type._name, contract_address, contract_type.abi
+        )
+    return contract
 
 
 # def deploy_mocks():
