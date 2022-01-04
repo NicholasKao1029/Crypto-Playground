@@ -145,3 +145,19 @@ This was a much faster deployment due to the foundation of the previous lessons.
 We used openzepplins ERC20 implementation, to create tokens and deploy them Using helpful_scripts from previous projects.
 
 ### Part 9
+
+*aave_borrow_py*
+
+Quite a complex project with our first intro to Defi while using Aave.
+
+Went through the basics of borrowing, lending and depositing to aave via the UI in [Aave]( staging.aave.com )
+
+Then interacted with the Aave contrats to borrow lend and deposit. 
+
+First we deposited Eth to retrieve Weth which is an erc20 token which allows us to interact with the aave. because it's a fungible token?
+Then we Deposited the Weth we got into Aave. Getting us Aeth which is an interest accuring asset. 
+Which we can then borrow using Aeth as collateral, which will get liquidated if our 'health measure' ges too low, and its seen as our borrowing is too risky.
+Then we repaid everything.  
+
+
+### Part 10
